@@ -1,182 +1,6 @@
 /* =============================================
-   main.js — Navigation & Utility Functions
+   main.js — Utility Functions for Multi-page Site
    ============================================= */
-
-/**
- * Switch between pages
- * @param {string} id - page name
- */
-function showPage(id) {
-  const mainContent = document.getElementById('main-content');
-  if (!mainContent) return;
-
-  // Swap content from PAGES object
-  if (PAGES[id]) {
-    mainContent.innerHTML = PAGES[id];
-  } else {
-    // Fallback to home if page doesn't exist
-    mainContent.innerHTML = PAGES['home'];
-    id = 'home';
-  }
-
-  // Remove active from all nav links
-  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-
-  // Set active nav link
-  const navEl = document.getElementById('nav-' + id);
-  if (navEl) navEl.classList.add('active');
-
-  // Special handling for Gallery page
-  if (id === 'gallery') {
-    renderGalleryPhotos();
-  }
-
-  // Scroll to top
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-/* ══════════════════════════════════════════════
-   GALLERY LOGIC
-══════════════════════════════════════════════ */
-
-/**
- * Filter gallery items by category.
- */
-function filterGallery(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    const itemCat = item.getAttribute('data-category');
-    if (cat === 'all' || itemCat === cat) {
-      item.style.display = '';
-    } else {
-      item.style.display = 'none';
-    }
-  });
-}
-
-/**
- * Render uploaded photos into the gallery grid
- */
-function renderGalleryPhotos() {
-  const grid = document.getElementById('galleryGrid');
-  if (!grid) return;
-
-  const galleryPhotos = JSON.parse(localStorage.getItem('ibc_gallery_photos') || '[]');
-  
-  // Remove any existing "uploaded" items first to avoid duplicates
-  document.querySelectorAll('.gallery-item.uploaded').forEach(el => el.remove());
-
-  galleryPhotos.forEach(photo => {
-    const item = document.createElement('div');
-    item.className = 'gallery-item uploaded';
-    item.setAttribute('data-category', 'graduates');
-    item.innerHTML = `
-      <div class="gallery-img">
-        <img class="gallery-img-real" src="${photo.src}" alt="${photo.name}">
-        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
-      </div>
-      <div class="gallery-caption">
-        <span class="gallery-cat-tag">Uploaded</span>
-        <p>${photo.name}</p>
-      </div>
-    `;
-    item.onclick = () => openLightbox(item);
-    grid.appendChild(item);
-  });
-}
-
-/* ── Lightbox ── */
-let lightboxItems = [];
-let lightboxIndex = 0;
-
-function openLightbox(el) {
-  const lb = document.getElementById('lightbox');
-  if (!lb) return;
-
-  lightboxItems = Array.from(document.querySelectorAll('.gallery-item:not([style*="display: none"])'));
-  lightboxIndex = lightboxItems.indexOf(el);
-  
-  renderLightbox(lightboxIndex);
-  lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-  const lb = document.getElementById('lightbox');
-  if (lb) lb.classList.remove('open');
-  document.body.style.overflow = '';
-  
-  // Stop any playing video
-  const imgWrap = document.getElementById('lightboxImgWrap');
-  if (imgWrap) imgWrap.innerHTML = '';
-}
-
-function lightboxNav(dir) {
-  lightboxIndex = (lightboxIndex + dir + lightboxItems.length) % lightboxItems.length;
-  renderLightbox(lightboxIndex);
-}
-
-function renderLightbox(idx) {
-  const item = lightboxItems[idx];
-  const imgWrap = document.getElementById('lightboxImgWrap');
-  const capEl = document.getElementById('lightboxCaption');
-  if (!item || !imgWrap) return;
-
-  const isVideo = item.getAttribute('data-video') === 'true';
-  const imgEl = item.querySelector('img');
-  const capP = item.querySelector('.gallery-caption p');
-  const catTag = item.querySelector('.gallery-cat-tag');
-  
-  if (isVideo) {
-    const videoSrc = item.getAttribute('data-src');
-    if (videoSrc) {
-      imgWrap.innerHTML = `
-        <video controls autoplay class="lb-video">
-          <source src="${videoSrc}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>`;
-    } else {
-      imgWrap.innerHTML = `
-        <div class="lb-video-placeholder">
-          <p>Video content up to 500MB</p>
-          <span>(Place your .mp4 video file here)</span>
-        </div>`;
-    }
-  } else if (imgEl) {
-    imgWrap.innerHTML = `<img src="${imgEl.src}" alt="Gallery photo">`;
-  } else {
-    imgWrap.innerHTML = `<div class="lb-placeholder"><span>Add a real photo here</span></div>`;
-  }
-
-  const catText = catTag ? catTag.textContent : '';
-  const capText = capP ? capP.textContent : '';
-  capEl.innerHTML = `
-    ${catText ? `<b style="color:var(--gold-light);">${catText}</b> &mdash; ` : ''}
-    ${capText}
-    <span style="color:rgba(255,255,255,0.3);font-size:0.78rem;margin-left:0.5rem;">${idx + 1} / ${lightboxItems.length}</span>
-  `;
-}
-
-// Global listeners
-document.addEventListener('keydown', (e) => {
-  const lb = document.getElementById('lightbox');
-  if (!lb || !lb.classList.contains('open')) return;
-  if (e.key === 'ArrowRight') lightboxNav(1);
-  if (e.key === 'ArrowLeft') lightboxNav(-1);
-  if (e.key === 'Escape') closeLightbox();
-});
-
-/**
- * Handle browser back/forward buttons & initial load
- */
-function handleRouting() {
-  const pageId = window.location.hash.replace('#', '') || 'home';
-  showPage(pageId);
-}
-
-window.addEventListener('hashchange', handleRouting);
 
 /**
  * Toggle mobile hamburger menu
@@ -233,30 +57,131 @@ document.addEventListener('click', function (e) {
   }
 });
 
+/* ══════════════════════════════════════════════
+   GALLERY LOGIC (for gallery.html)
+══════════════════════════════════════════════ */
+
+/**
+ * Filter gallery items by category.
+ */
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    const itemCat = item.getAttribute('data-category');
+    if (cat === 'all' || itemCat === cat) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+/**
+ * Render uploaded photos from localStorage if needed (legacy support)
+ */
+function renderGalleryPhotos() {
+  const grid = document.getElementById('galleryGrid');
+  if (!grid) return;
+
+  const galleryPhotos = JSON.parse(localStorage.getItem('ibc_gallery_photos') || '[]');
+  
+  galleryPhotos.forEach(photo => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item uploaded';
+    item.setAttribute('data-category', 'graduates');
+    item.innerHTML = `
+      <div class="gallery-img">
+        <img class="gallery-img-real" src="${photo.src}" alt="${photo.name}">
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-caption">
+        <span class="gallery-cat-tag">Uploaded</span>
+        <p>${photo.name}</p>
+      </div>
+    `;
+    item.onclick = () => openLightbox(item);
+    grid.appendChild(item);
+  });
+}
+
+/* ── Lightbox ── */
+let lightboxItems = [];
+let lightboxIndex = 0;
+
+function openLightbox(el) {
+  const lb = document.getElementById('lightbox');
+  if (!lb) return;
+
+  lightboxItems = Array.from(document.querySelectorAll('.gallery-item:not([style*="display: none"])'));
+  lightboxIndex = lightboxItems.indexOf(el);
+  
+  renderLightbox(lightboxIndex);
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const lb = document.getElementById('lightbox');
+  if (lb) lb.classList.remove('open');
+  document.body.style.overflow = '';
+  
+  const imgWrap = document.getElementById('lightboxImgWrap');
+  if (imgWrap) imgWrap.innerHTML = '';
+}
+
+function lightboxNav(dir) {
+  lightboxIndex = (lightboxIndex + dir + lightboxItems.length) % lightboxItems.length;
+  renderLightbox(lightboxIndex);
+}
+
+function renderLightbox(idx) {
+  const item = lightboxItems[idx];
+  const imgWrap = document.getElementById('lightboxImgWrap');
+  const capEl = document.getElementById('lightboxCaption');
+  if (!item || !imgWrap) return;
+
+  const isVideo = item.getAttribute('data-video') === 'true';
+  const imgEl = item.querySelector('img');
+  const capP = item.querySelector('.gallery-caption p');
+  const catTag = item.querySelector('.gallery-cat-tag');
+  
+  if (isVideo) {
+    const videoSrc = item.getAttribute('data-src');
+    if (videoSrc) {
+      imgWrap.innerHTML = `
+        <video controls autoplay class="lb-video">
+          <source src="${videoSrc}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>`;
+    }
+  } else if (imgEl) {
+    imgWrap.innerHTML = `<img src="${imgEl.src}" alt="Gallery photo">`;
+  }
+
+  const catText = catTag ? catTag.textContent : '';
+  const capText = capP ? capP.textContent : '';
+  capEl.innerHTML = `
+    ${catText ? `<b style="color:var(--gold-light);">${catText}</b> &mdash; ` : ''}
+    ${capText}
+    <span style="color:rgba(255,255,255,0.3);font-size:0.78rem;margin-left:0.5rem;">${idx + 1} / ${lightboxItems.length}</span>
+  `;
+}
+
+// Lightbox Keyboard listeners
+document.addEventListener('keydown', (e) => {
+  const lb = document.getElementById('lightbox');
+  if (!lb || !lb.classList.contains('open')) return;
+  if (e.key === 'ArrowRight') lightboxNav(1);
+  if (e.key === 'ArrowLeft') lightboxNav(-1);
+  if (e.key === 'Escape') closeLightbox();
+});
+
 // ── INITIALIZATION ──
 document.addEventListener('DOMContentLoaded', () => {
-  const isLocalFile = window.location.protocol === 'file:';
-  
-  // Check for legacy URL query parameters
-  const urlParams = new URLSearchParams(window.location.search);
-  const pageId = urlParams.get('page');
-
-  if (pageId) {
-    const newHash = '#' + pageId;
-    if (isLocalFile) {
-      window.location.hash = newHash;
-    } else {
-      window.history.replaceState(null, '', window.location.pathname + newHash);
-    }
-    handleRouting();
-  } else if (!window.location.hash) {
-    if (isLocalFile) {
-      window.location.hash = '#home';
-    } else {
-      window.history.replaceState(null, '', window.location.pathname + '#home');
-    }
-    handleRouting();
-  } else {
-    handleRouting();
+  // If we're on the gallery page, render any local storage photos
+  if (window.location.pathname.includes('gallery.html')) {
+    renderGalleryPhotos();
   }
 });

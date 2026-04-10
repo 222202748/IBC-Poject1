@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact India Bible College for inquiries, prayer requests, or campus visits. We are located in Chennai, Tamil Nadu.">
+  <title>Contact Us | India Bible College</title>
+  <link rel="icon" href="js/icons/logo.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <span>📞 +91 78456 06488&nbsp;|&nbsp; ✉️ <a href="mailto:indiabiblecollege2024@gmail.com">indiabiblecollege2024@gmail.com</a></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo-wrap">
+      <div class="logo-text">
+        <strong>India Bible College</strong>
+        <span>Est. 2024</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="courses.html">Programmes</a></li>
+      <li><a href="admissions.html">Admission</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active nav-cta">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="courses.html">Programmes</a>
+    <a href="admissions.html">Admission</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+
+  <main id="main-content">
+    <div class="page-hero">
+      <h1>Contact India Bible College</h1>
+      <p>We are here to help and pray for you</p>
+    </div>
+
+    <section class="section">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">Get in Touch</div>
+          <h2 class="section-title">Reach Our Campus</h2>
+          <p>Have questions about our programmes or need prayer? Feel free to contact our office or visit us.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Address</strong>
+                <p>No. 173/2-B, Roja Thottam, Kadeshanagar, Irumbuliyur, Chennai, Tamil Nadu, India</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <strong>Phone / WhatsApp</strong>
+                <p><a href="https://wa.me/917845606488" target="_blank" style="color: inherit; text-decoration: none;">+91 78456 06488</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <p>indiabiblecollege2024@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🕒</div>
+              <div>
+                <strong>Office Hours</strong>
+                <p>Mon – Sat: 10:00 AM – 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3 style="margin-bottom: 1.5rem; color: var(--maroon);">Send a Message</h3>
+          <form onsubmit="submitForm(event, 'contactSuccess', 'contact')">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="+91 00000 00000">
+              </div>
+              <div class="form-group">
+                <label>Subject</label>
+                <select name="subject" required>
+                  <option value="Admission Enquiry">Admission Enquiry</option>
+                  <option value="Prayer Request">Prayer Request</option>
+                  <option value="General Question">General Question</option>
+                  <option value="Visit Campus">Visit Campus</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" rows="5" required placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Send Message</button>
+            <div class="success-msg" id="contactSuccess">🙏 Thank you! Your message has been received. We will reply soon. God bless you!</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
+          <img src="js/icons/logo.ico" alt="IBC Logo" style="height: 50px;">
+          <div>India <span>Bible</span> College</div>
+        </div>
+        <div class="footer-sub">Est. 2024 · No. 173/2-B, Roja Thottam, Kadeshanagar, Irumbuliyur, Chennai, Tamil Nadu, India</div>
+        <p>Raising faithful servants of God for over 2 years. Rooted in Scripture. Called to serve. Sent to the nations.</p>
+        <div class="footer-verse">"He is the one we proclaim, admonishing and teaching everyone with all wisdom, so that we may present everyone fully mature in Christ." — Colossians 1:28</div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Programmes</a></li>
+          <li><a href="admissions.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programmes</h4>
+        <ul>
+         <li><a>Certificate in Theology</a></li>
+         <li><a>Diploma in Theology</a></li>
+         <li><a>Bachelor of Theology</a></li>
+          <li><a>Master of Divinity</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a>📍No. 173/2-B, Roja Thottam, Kadeshanagar, Irumbuliyur, Chennai, Tamil Nadu, India.</a></li>
+          <li><a>📞 +91 78456 06488</a></li>
+          <li><a>✉️ indiabiblecollege2024@gmail.com</a></li>
+          <li><a href="contact.html">Send a Message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <span>India Bible College</span>. All rights reserved.</p>
+      <p>Affiliation with Dayspring Theological University, Texas, USA. & Accredited by Nations Associations For Theological Accreditation, (NATA), Bangalore, India.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply for admission to India Bible College. Join our theological programmes and equip yourself for ministry.">
+  <title>Admission | India Bible College</title>
+  <link rel="icon" href="js/icons/logo.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <span>📞 +91 78456 06488&nbsp;|&nbsp; ✉️ <a href="mailto:indiabiblecollege2024@gmail.com">indiabiblecollege2024@gmail.com</a></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo-wrap">
+      <div class="logo-text">
+        <strong>India Bible College</strong>
+        <span>Est. 2024</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="courses.html">Programmes</a></li>
+      <li><a href="admissions.html" class="active">Admission</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="courses.html">Programmes</a>
+    <a href="admissions.html" class="active">Admission</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+    <div class="page-hero">
+      <h1>Admission Open</h1>
+      <p>Begin Your Journey of Theological Excellence</p>
+    </div>
+
+    <section class="section">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label">Enrollment</div>
+          <h2 class="section-title">How to Apply</h2>
+          <p>We are excited that you are considering India Bible College for your theological education. Our admission process is designed to identify individuals who are called by God and committed to serving Him.</p>
+          
+          <div style="margin-top: 2rem;">
+            <h3>1. Choose Your Programme</h3>
+            <p>Review our <a href="courses.html">Programmes</a> to find the one that best fits your calling and academic background.</p>
+          </div>
+          
+          <div style="margin-top: 1.5rem;">
+            <h3>2. Fill the Online Application</h3>
+            <p>Complete our official application form via Google Forms. Ensure all details are accurate.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfP92Rwlg3dZLcy_mJ5zDNDnOsGs8U6LGr_KCuuNkY7w19FYw/viewform?usp=header" target="_blank" class="btn-primary" style="margin-top: 1rem; text-decoration: none; display: inline-block;">Open Application Form →</a>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <h3>3. Interview & Documentation</h3>
+            <p>After reviewing your application, our admissions team will contact you for an interview and request necessary documents (educational certificates, pastoral recommendation, etc.).</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3 style="margin-bottom: 1.5rem; color: var(--maroon);">Inquiry Form</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;">Not ready to apply yet? Send us an inquiry and we'll get back to you.</p>
+          <form onsubmit="submitForm(event, 'admissionSuccess', 'admission')">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label>Interested Programme</label>
+              <select name="programme" required>
+                <option value="C.Th">Certificate in Theology (C.Th)</option>
+                <option value="D.Th">Diploma in Theology (D.Th)</option>
+                <option value="B.Th">Bachelor of Theology (B.Th)</option>
+                <option value="M.Div">Master of Divinity (M.Div)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message / Question</label>
+              <textarea name="message" rows="4" required placeholder="Any specific questions?"></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Send Inquiry</button>
+            <div class="success-msg" id="admissionSuccess">🙏 Thank you! Your inquiry has been received. We will contact you shortly.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
+          <img src="js/icons/logo.ico" alt="IBC Logo" style="height: 50px;">
+          <div>India <span>Bible</span> College</div>
+        </div>
+        <div class="footer-sub">Est. 2024 · No. 173/2-B, Roja Thottam, Kadeshanagar, Irumbuliyur, Chennai, Tamil Nadu, India</div>
+        <p>Raising faithful servants of God for over 2 years. Rooted in Scripture. Called to serve. Sent to the nations.</p>
+        <div class="footer-verse">"He is the one we proclaim, admonishing and teaching everyone with all wisdom, so that we may present everyone fully mature in Christ." — Colossians 1:28</div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Programmes</a></li>
+          <li><a href="admissions.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programmes</h4>
+        <ul>
+         <li><a>Certificate in Theology</a></li>
+         <li><a>Diploma in Theology</a></li>
+         <li><a>Bachelor of Theology</a></li>
+          <li><a>Master of Divinity</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a>📍No. 173/2-B, Roja Thottam, Kadeshanagar, Irumbuliyur, Chennai, Tamil Nadu, India.</a></li>
+          <li><a>📞 +91 78456 06488</a></li>
+          <li><a>✉️ indiabiblecollege2024@gmail.com</a></li>
+          <li><a href="contact.html">Send a Message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <span>India Bible College</span>. All rights reserved.</p>
+      <p>Affiliation with Dayspring Theological University, Texas, USA. & Accredited by Nations Associations For Theological Accreditation, (NATA), Bangalore, India.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

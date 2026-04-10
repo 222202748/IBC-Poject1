@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View the gallery of India Bible College, featuring graduation ceremonies, accreditation certificates, and campus highlights.">
+  <title>Gallery | India Bible College</title>
+  <link rel="icon" href="js/icons/logo.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <span>📞 +91 78456 06488&nbsp;|&nbsp; ✉️ <a href="mailto:indiabiblecollege2024@gmail.com">indiabiblecollege2024@gmail.com</a></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo-wrap">
+      <div class="logo-text">
+        <strong>India Bible College</strong>
+        <span>Est. 2024</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="courses.html">Programmes</a></li>
+      <li><a href="admissions.html">Admission</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="courses.html">Programmes</a>
+    <a href="admissions.html">Admission</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+    <div class="page-hero">
+      <h1>Gallery & Recognition</h1>
+      <p>&ldquo;To everything there is a season&hellip; a time to every purpose under the heaven.&rdquo; &mdash; Ecclesiastes 3:1</p>
+    </div>
+
+    <section class="section section-alt">
+
+      <div class="gallery-header">
+        <div class="section-label">Certificates & Celebrations</div>
+        <h2 class="section-title">Academic Excellence & Spiritual Milestones</h2>
+        <p class="section-subtitle">A collection of our official accreditations and highlights from our graduation ceremonies, celebrating the faithfulness of God in our ministry.</p>
+
+        <div class="gallery-filters">
+          <button class="filter-btn active" onclick="filterGallery('all', this)">All Media</button>
+          <button class="filter-btn" onclick="filterGallery('accreditation', this)">Accreditation</button>
+          <button class="filter-btn" onclick="filterGallery('ceremony', this)">Ceremony</button>
+          <button class="filter-btn" onclick="filterGallery('campus', this)">Campus</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Accreditation Certificates -->
+        <div class="gallery-item" data-category="accreditation" onclick="openLightbox(this)">
+          <div class="gallery-img">
+            <img class="gallery-img-real" src="js/image/1.jpeg" alt="NATA Accreditation Certificate">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Accreditation</span>
+            <p>NATA Accreditation Certificate - India Bible College</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="accreditation" onclick="openLightbox(this)">
+          <div class="gallery-img">
+            <img class="gallery-img-real" src="js/image/2.jpeg" alt="DTU Affiliation Certificate">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Affiliation</span>
+            <p>Dayspring Theological University Affiliation Certificate</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="accreditation" onclick="openLightbox(this)">
+          <div class="gallery-img">
+            <img class="gallery-img-real" src="js/image/3.jpeg" alt="NATA Membership Certificate">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Membership</span>
+            <p>NATA Membership Certificate - India Bible College</p>
+          </div>
+        </div>
+
+        <!-- Campus & Places -->
+        <div class="gallery-item" data-category="campus" onclick="openLightbox(this)">
+          <div class="gallery-img">
+            <img class="gallery-img-real" src="js/image/WhatsApp Image 2026-04-09 at 3.47.19 PM.jpeg" alt="College Campus">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Campus</span>
+            <p>The India Bible College Campus Grounds</p>
+          </div>
+        </div>
+
+        <!-- Graduation Photos -->
+        <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)">
+          <div class="gallery-img">
+            <img class="gallery-img-real" src="js/image/12.jpeg" alt="1st Graduation">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Ceremony</span>
+            <p>Highlights from our 1st Graduation Ceremony</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)">
+          <div class="gallery-img">
+            <img class="gallery-img-real" src="js/image/chairman.jpeg" alt="Chairman addressing the assembly">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Ceremony</span>
+            <p>Our Honorable Chairman addressing the assembly</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)">
+          <div class="gallery-img">
+            <img class="gallery-img-real" src="js/image/13.jpeg" alt="Graduation Procession">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Ceremony</span>
+            <p>Commemorative photo of the Graduation Procession</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)">
+          <div class="gallery-img">
+            <img class="gallery-img-real" src="js/image/9.jpeg" alt="2nd Graduation Ceremony">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Ceremony</span>
+            <p>Blessings from our 2nd Graduation Ceremony</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)">
+          <div class="gallery-img">
+            <img class="gallery-img-real" src="js/image/7.jpeg" alt="3rd Graduation Ceremony">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Ceremony</span>
+            <p>Joyous moments from our 3rd Graduation Ceremony</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)">
+          <div class="gallery-img">
+            <img class="gallery-img-real" src="js/image/14.jpeg" alt="Graduation Highlights">
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Ceremony</span>
+            <p>Graduation Ceremony - A day of celebration and sending</p>
+          </div>
+        </div>
+
+        <!-- Videos -->
+        <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)" data-video="true" data-src="js/vedios/video1.mp4">
+          <div class="gallery-img ceremony">
+            <video class="gallery-video-preview" muted loop onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+              <source src="js/vedios/video1.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Video Highlight</span>
+            <p>India Bible College Graduation Ceremony Video - Part 1</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)" data-video="true" data-src="js/vedios/video2.mp4">
+          <div class="gallery-img ceremony">
+            <video class="gallery-video-preview" muted loop onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+              <source src="js/vedios/video2.mp4" type="video/mp4">
+            </video>
+            <div class="gallery-overlay"></div>
+          </div>
+          <div class="gallery-caption">
+            <span class="gallery-cat-tag">Video Highlight</span>
+            <p>India Bible College Graduation Ceremony Video - Part 2</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <div class="lightbox-inner" onclick="event.stopPropagation()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-prev" onclick="lightboxNav(-1)">&#8249;</button>
+        <button class="lightbox-next" onclick="lightboxNav(1)">&#8250;</button>
+        <div class="lightbox-img-wrap" id="lightboxImgWrap"></div>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
+          <img src="js/icons/logo.ico" alt="IBC Logo" style="height: 50px;">
+          <div>India <span>Bible</span> College</div>
+        </div>
+        <div class="footer-sub">Est. 2024 · No. 173/2-B, Roja Thottam, Kadeshanagar, Irumbuliyur, Chennai, Tamil Nadu, India</div>
+        <p>Raising faithful servants of God for over 2 years. Rooted in Scripture. Called to serve. Sent to the nations.</p>
+        <div class="footer-verse">"He is the one we proclaim, admonishing and teaching everyone with all wisdom, so that we may present everyone fully mature in Christ." — Colossians 1:28</div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Programmes</a></li>
+          <li><a href="admissions.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Programmes</h4>
+        <ul>
+         <li><a>Certificate in Theology</a></li>
+         <li><a>Diploma in Theology</a></li>
+         <li><a>Bachelor of Theology</a></li>
+          <li><a>Master of Divinity</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a>📍No. 173/2-B, Roja Thottam, Kadeshanagar, Irumbuliyur, Chennai, Tamil Nadu, India.</a></li>
+          <li><a>📞 +91 78456 06488</a></li>
+          <li><a>✉️ indiabiblecollege2024@gmail.com</a></li>
+          <li><a href="contact.html">Send a Message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <span>India Bible College</span>. All rights reserved.</p>
+      <p>Affiliation with Dayspring Theological University, Texas, USA. & Accredited by Nations Associations For Theological Accreditation, (NATA), Bangalore, India.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -93,8 +93,8 @@ const PAGES = {
         <div class="course-body">
           <div class="course-tag">Theology</div>
           <h3>Certificate in Theology</h3>
-          <p>A foundational Six Months programme for lay leaders and those starting their ministry journey.</p>
-          <p> 25 class each classes has One and half hours</p>
+          <p>A foundational six-month programme for lay leaders and those starting their ministry journey.</p>
+          <p>25 sessions, each 1.5 hours.</p>
           <div class="course-meta"><span>⏱ 6 Months</span><span>📚 Residential</span><span>🎓 Certificate</span></div>
         </div>
       </div>
@@ -105,8 +105,8 @@ const PAGES = {
           <div class="course-tag">Theology</div>
           <h3>Diploma in Theology</h3>
           <p>One-year, intensive programme focusing on biblical studies, ministry skills, and spiritual formation.</p>
-          <p> 50 class each classes has One and half hours</p>
-          <div class="course-meta"><span>⏱  2 Years</span><span>📚 Residential</span><span>🎓 Diploma</span></div>
+          <p>50 sessions, each 1.5 hours.</p>
+          <div class="course-meta"><span>⏱ 1 Year</span><span>📚 Residential</span><span>🎓 Diploma</span></div>
         </div>
       </div>
 
@@ -116,7 +116,7 @@ const PAGES = {
           <div class="course-tag">Theology</div>
           <h3>Bachelor of Theology (B.Th.)</h3>
           <p>A comprehensive 3-year degree covering Old & New Testament, systematic theology, church history, and homiletics.</p>
-          <p> 150 class, each classes One and half hours</p>
+          <p>150 sessions, each 1.5 hours.</p>
           <div class="course-meta"><span>⏱ 3 Years</span><span>📚 Residential</span><span>🎓 Degree</span></div>
         </div>
       </div>
@@ -155,10 +155,10 @@ const PAGES = {
       <div class="testi-card">
         <div class="cross-small">✝ ✝ ✝</div>
         <p>IBC didn’t just impart theological knowledge through the Certificate in Theology—it set my heart ablaze with a passion for the lost.
-          Now I serve as a Good Reader in Tambaram, Chennai, Tamil Nadu, and I give all glory to God for His grace and calling..</p>
+          Now I serve as a faithful student of the Word in Tambaram, Chennai, Tamil Nadu, and I give all glory to God for His grace and calling.</p>
         <div class="testi-author">
           <div class="testi-avatar">J</div>
-          <div><h5>Sis. Elizabeth </h5><span> Good leaner fo Bible,  AJC Siluvairaja Ministry , TN</span></div>
+          <div><h5>Sis. Elizabeth </h5><span> Faithful Bible Student, AJC Siluvairaja Ministry, TN</span></div>
         </div>
       </div>
     </div>
@@ -205,7 +205,7 @@ const PAGES = {
     </div>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-image"><img src="js/image/pastor 1.jpeg" alt="Rev. V. Vincent"></div>
+        <div class="feature-image"><img src="js/image/pastor1.jpeg" alt="Rev. V. Vincent"></div>
         <h3>Rev. V. Vincent </h3>
         <p><b>Founder & President.</b></p>
         <p>20 years in pastoral ministry.</p>
@@ -213,14 +213,14 @@ const PAGES = {
       </div>
 
       <div class="feature-card">
-        <div class="feature-image"><img src="js/image/pastor2.jpeg" alt="J. Sbastin Rajasehar"></div>
+        <div class="feature-image"><img src="js/image/pastor2.jpeg" alt="J. Sebastin Rajasehar"></div>
         <h3>J. Sebastin Rajasehar</h3>
         <p>B.Sc., B.Ed. - M.Div. Specialist in Ministry Theology.</p>
         <p>Tutor</p>
       </div>
 
       <div class="feature-card">
-        <div class="feature-image"><img src="js/image/lecturer 3.jpeg" alt="Patricia Pauline k"></div>
+        <div class="feature-image"><img src="js/image/lecturer3.jpeg" alt="Mrs. K. Patricia Pauline"></div>
         <h3> Mrs. K. Patricia Pauline  </h3>
         <p>M.E.,</p>
         <p>Tutor</p>
@@ -323,7 +323,7 @@ const PAGES = {
             <div class="contact-icon">📍</div>
             <div>
               <strong>Address</strong>
-              <p>No. 173/2-B, Roja Thotta, Kadeshanagar,Irumbuliyur,Chennai, Tamil Nadu,India</p>
+              <p>No. 173/2-B, Roja Thottam, Kadeshanagar, Irumbuliyur, Chennai, Tamil Nadu, India</p>
             </div>
           </div>
           <div class="contact-item">
@@ -524,10 +524,10 @@ const PAGES = {
       </div>
 
       <!-- Videos -->
-      <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)" data-video="true" data-src="js/vedios/vedio1.mp4">
+      <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)" data-video="true" data-src="js/vedios/video1.mp4">
         <div class="gallery-img ceremony">
           <video class="gallery-video-preview" muted loop onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-            <source src="js/vedios/vedio1.mp4" type="video/mp4">
+            <source src="js/vedios/video1.mp4" type="video/mp4">
           </video>
           <div class="gallery-overlay"></div>
         </div>
@@ -537,10 +537,10 @@ const PAGES = {
         </div>
       </div>
 
-      <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)" data-video="true" data-src="js/vedios/vedio2.mp4">
+      <div class="gallery-item" data-category="ceremony" onclick="openLightbox(this)" data-video="true" data-src="js/vedios/video2.mp4">
         <div class="gallery-img ceremony">
           <video class="gallery-video-preview" muted loop onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-            <source src="js/vedios/vedio2.mp4" type="video/mp4">
+            <source src="js/vedios/video2.mp4" type="video/mp4">
           </video>
           <div class="gallery-overlay"></div>
         </div>

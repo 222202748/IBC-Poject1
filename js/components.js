@@ -47,7 +47,7 @@ document.getElementById('footer-placeholder').innerHTML = `
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
-        <img src="js/icons/WhatsApp_Image_2026-02-25_at_1.26.35_PM-removebg-preview.ico" alt="IBC Logo" style="height: 50px;">
+        <img src="js/icons/logo.ico" alt="IBC Logo" style="height: 50px;">
         <div>India <span>Bible</span> College</div>
       </div>
       <div class="footer-sub">Est. 2024 · No. 173/2-B, Roja Thottam, Kadeshanagar, Irumbuliyur, Chennai, Tamil Nadu, India</div>
@@ -77,7 +77,7 @@ document.getElementById('footer-placeholder').innerHTML = `
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a>📍No. 173/2-B, Roja Thotta, Kadeshanagar,Irumbuliyur,Chennai, Tamil Nadu,India.</a></li>
+        <li><a>📍No. 173/2-B, Roja Thottam, Kadeshanagar, Irumbuliyur, Chennai, Tamil Nadu, India.</a></li>
         <li><a>📞 +91 78456 06488</a></li>
         <li><a>✉️ indiabiblecollege2024@gmail.com</a></li>
         <li><a href="#contact">Send a Message</a></li>

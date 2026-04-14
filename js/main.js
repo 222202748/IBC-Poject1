@@ -120,6 +120,21 @@ function openLightbox(el) {
   renderLightbox(lightboxIndex);
   lb.classList.add('open');
   document.body.style.overflow = 'hidden';
+
+  // Add navigation areas if they don't exist
+  const inner = lb.querySelector('.lightbox-inner');
+  if (inner && !inner.querySelector('.lightbox-nav-overlay')) {
+    const leftNav = document.createElement('div');
+    leftNav.className = 'lightbox-nav-overlay left';
+    leftNav.onclick = (e) => { e.stopPropagation(); lightboxNav(-1); };
+    
+    const rightNav = document.createElement('div');
+    rightNav.className = 'lightbox-nav-overlay right';
+    rightNav.onclick = (e) => { e.stopPropagation(); lightboxNav(1); };
+    
+    inner.appendChild(leftNav);
+    inner.appendChild(rightNav);
+  }
 }
 
 function closeLightbox() {

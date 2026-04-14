@@ -450,22 +450,22 @@ nav {
 
 .lightbox-close {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 1rem;
+  right: 1rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: none;
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 .lightbox-close:hover {
@@ -499,6 +499,30 @@ nav {
 .lightbox-prev:hover,
 .lightbox-next:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* ── Lightbox Nav Overlays ── */
+.lightbox-nav-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+}
+
+.lightbox-nav-overlay.left {
+  left: 0;
+}
+
+.lightbox-nav-overlay.right {
+  right: 0;
+}
+
+/* Ensure controls on video can be clicked if they overlap slightly */
+.lb-video {
+  z-index: 5;
 }
 
 @keyframes fadeIn {

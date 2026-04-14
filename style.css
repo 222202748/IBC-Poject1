@@ -472,35 +472,6 @@ nav {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.lightbox-prev,
-.lightbox-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: none;
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-size: 2.5rem;
-  cursor: pointer;
-  z-index: 100;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s;
-}
-
-.lightbox-prev { left: 2rem; }
-.lightbox-next { right: 2rem; }
-
-.lightbox-prev:hover,
-.lightbox-next:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
 /* ── Lightbox Nav Overlays ── */
 .lightbox-nav-overlay {
   position: absolute;

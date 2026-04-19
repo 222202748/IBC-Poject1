@@ -2,7 +2,14 @@
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+                      http://www.google.com/schemas/sitemap-image/1.1
+                      http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd
+                      http://www.google.com/schemas/sitemap-video/1.1
+                      http://www.google.com/schemas/sitemap-video/1.1/sitemap-video.xsd">
 
   <!-- Home Page -->
   <url>
@@ -12,8 +19,8 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/img2.png</image:loc>
-      <image:title>India Bible College Chennai — Accredited Theology Degrees</image:title>
-      <image:caption>India Bible College — Equipping Servants for the Nations since 2024</image:caption>
+      <image:title>India Bible College Chennai - Accredited Theology Degrees</image:title>
+      <image:caption>India Bible College - Equipping Servants for the Nations since 2024</image:caption>
     </image:image>
   </url>
 
@@ -25,20 +32,20 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/pastor1.jpeg</image:loc>
-      <image:title>Rev. V. Vincent — Founder & President, India Bible College</image:title>
-      <image:caption>IBC faculty — experienced pastors, theologians, and missionaries</image:caption>
+      <image:title>Rev. V. Vincent - Founder &amp; President, India Bible College</image:title>
+      <image:caption>IBC faculty - experienced pastors, theologians, and missionaries</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/pastor2.jpeg</image:loc>
-      <image:title>J. Sebastin Rajasehar — M.Div Specialist, India Bible College</image:title>
+      <image:title>J. Sebastin Rajasehar - M.Div Specialist, India Bible College</image:title>
     </image:image>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/lecturer3.jpeg</image:loc>
-      <image:title>Mrs. K. Patricia Pauline — Tutor, India Bible College</image:title>
+      <image:title>Mrs. K. Patricia Pauline - Tutor, India Bible College</image:title>
     </image:image>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/lecturer4.jpeg</image:loc>
-      <image:title>Rev. John V — Theology Teacher, India Bible College</image:title>
+      <image:title>Rev. John V - Theology Teacher, India Bible College</image:title>
     </image:image>
   </url>
 
@@ -50,7 +57,7 @@
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/img2.png</image:loc>
-      <image:title>India Bible College Theological Programmes — B.Th, M.Div, D.Th, C.Th</image:title>
+      <image:title>India Bible College Theological Programmes - B.Th, M.Div, D.Th, C.Th</image:title>
       <image:caption>Accredited residential theology degrees offered by IBC Chennai</image:caption>
     </image:image>
   </url>
@@ -76,23 +83,23 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/1.jpeg</image:loc>
-      <image:title>NATA Accreditation Certificate — India Bible College</image:title>
+      <image:title>NATA Accreditation Certificate - India Bible College</image:title>
     </image:image>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/2.jpeg</image:loc>
-      <image:title>Dayspring Theological University Affiliation Certificate — IBC</image:title>
+      <image:title>Dayspring Theological University Affiliation Certificate - IBC</image:title>
     </image:image>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/3.jpeg</image:loc>
-      <image:title>NATA Membership Certificate — India Bible College</image:title>
+      <image:title>NATA Membership Certificate - India Bible College</image:title>
     </image:image>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/12.jpeg</image:loc>
-      <image:title>India Bible College 1st Graduation Ceremony — Chennai</image:title>
+      <image:title>India Bible College 1st Graduation Ceremony - Chennai</image:title>
     </image:image>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/13.jpeg</image:loc>
-      <image:title>India Bible College Graduation Procession — Tamil Nadu</image:title>
+      <image:title>India Bible College Graduation Procession - Tamil Nadu</image:title>
     </image:image>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/9.jpeg</image:loc>
@@ -108,21 +115,21 @@
     </image:image>
     <image:image>
       <image:loc>https://indiabiblecollege.org/js/image/chairman.jpeg</image:loc>
-      <image:title>Chairman addressing the assembly — IBC Graduation</image:title>
+      <image:title>Chairman addressing the assembly - IBC Graduation</image:title>
     </image:image>
     <video:video>
       <video:thumbnail_loc>https://indiabiblecollege.org/js/image/12.jpeg</video:thumbnail_loc>
-      <video:title>India Bible College Graduation Ceremony Video — Part 1</video:title>
-      <video:description>Graduation highlight video from India Bible College, Chennai — celebrating faithful ministers sent to the nations.</video:description>
-      <video:content_loc>https://indiabiblecollege.org/js/vedios/video1.mp4</video:content_loc>
+      <video:title>India Bible College Graduation Ceremony Video - Part 1</video:title>
+      <video:description>Graduation highlight video from India Bible College, Chennai - celebrating faithful ministers sent to the nations.</video:description>
+      <video:content_loc>https://indiabiblecollege.org/js/videos/video1.mp4</video:content_loc>
       <video:publication_date>2026-01-01</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://indiabiblecollege.org/js/image/12.jpeg</video:thumbnail_loc>
-      <video:title>India Bible College Graduation Ceremony Video — Part 2</video:title>
+      <video:title>India Bible College Graduation Ceremony Video - Part 2</video:title>
       <video:description>Second graduation highlight video from India Bible College, Chennai.</video:description>
-      <video:content_loc>https://indiabiblecollege.org/js/vedios/video2.mp4</video:content_loc>
+      <video:content_loc>https://indiabiblecollege.org/js/videos/video2.mp4</video:content_loc>
       <video:publication_date>2026-01-01</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>

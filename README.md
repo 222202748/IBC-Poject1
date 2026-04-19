@@ -17,7 +17,7 @@ ibc-website/
     ├── main.js         ← Menu toggle, Lightbox, Form handling (WhatsApp redirect)
     ├── icons/          ← Favicons and logos
     ├── image/          ← Campus and faculty photos
-    └── vedios/         ← Graduation highlight videos
+    └── videos/         ← Graduation highlight videos
 ```
 
 ## Features

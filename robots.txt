@@ -27,7 +27,7 @@ Allow: /js/icons/
 
 # === Googlebot-Video ===
 User-agent: Googlebot-Video
-Allow: /js/vedios/
+Allow: /js/videos/
 
 # === Bingbot ===
 User-agent: Bingbot

@@ -1,0 +1,18 @@
+# India Bible College — _redirects
+# (Netlify / Vercel / Cloudflare Pages)
+
+# Canonical home — remove trailing /index.html
+/index.html   /   301!
+
+# www → non-www (Netlify handles HTTPS automatically)
+# https://www.indiabiblecollege.org/*  https://indiabiblecollege.org/:splat  301!
+
+# Pretty URL aliases (optional — add when ready)
+# /apply        /admissions.html    301
+# /courses      /courses.html       301
+# /about        /about.html         301
+# /contact      /contact.html       301
+# /gallery      /gallery.html       301
+
+# Catch-all 404 → home
+/*  /index.html  200

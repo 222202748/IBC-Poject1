@@ -1,0 +1,55 @@
+{
+  "name": "India Bible College",
+  "short_name": "IBC Chennai",
+  "description": "Accredited theological education in Chennai — B.Th, M.Div, Diploma & Certificate in Theology. Affiliated with Dayspring Theological University USA & NATA India.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fdf8f0",
+  "theme_color": "#4a0e0e",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["education", "religion"],
+  "icons": [
+    {
+      "src": "/js/icons/logo.ico",
+      "sizes": "any",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Programmes",
+      "short_name": "Courses",
+      "description": "View B.Th, M.Div, Diploma & Certificate theology programmes",
+      "url": "/courses.html",
+      "icons": [{ "src": "/js/icons/logo.ico", "sizes": "any" }]
+    },
+    {
+      "name": "Apply Now",
+      "short_name": "Admission",
+      "description": "Apply for admission to India Bible College",
+      "url": "/admissions.html",
+      "icons": [{ "src": "/js/icons/logo.ico", "sizes": "any" }]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with India Bible College, Chennai",
+      "url": "/contact.html",
+      "icons": [{ "src": "/js/icons/logo.ico", "sizes": "any" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/js/image/img2.png",
+      "sizes": "1200x500",
+      "type": "image/png",
+      "label": "India Bible College — Admissions Open 2026"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

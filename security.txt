@@ -1,0 +1,3 @@
+Contact: mailto:indiabiblecollege2024@gmail.com
+Preferred-Languages: en
+Canonical: https://indiabiblecollege.org/.well-known/security.txt

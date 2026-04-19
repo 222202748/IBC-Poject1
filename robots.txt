@@ -1,3 +1,66 @@
+# robots.txt — India Bible College (https://indiabiblecollege.org)
+# Last updated: 2026-04-19
+
+# === Allow all major search engine bots ===
 User-agent: *
 Allow: /
+Allow: /js/image/
+Allow: /js/icons/
+
+# Disallow private / backend paths (add real ones as needed)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*.php$
+Disallow: /*?*utm_
+
+# === Googlebot specific ===
+User-agent: Googlebot
+Allow: /
+Allow: /js/image/
+Allow: /js/icons/
+Crawl-delay: 5
+
+# === Googlebot-Image ===
+User-agent: Googlebot-Image
+Allow: /js/image/
+Allow: /js/icons/
+
+# === Googlebot-Video ===
+User-agent: Googlebot-Video
+Allow: /js/vedios/
+
+# === Bingbot ===
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+# === DuckDuckBot ===
+User-agent: DuckDuckBot
+Allow: /
+
+# === Baidu ===
+User-agent: Baiduspider
+Allow: /
+
+# === Yandex ===
+User-agent: Yandex
+Allow: /
+
+# === Block bad bots ===
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# === Sitemap ===
 Sitemap: https://indiabiblecollege.org/sitemap.xml

@@ -31,6 +31,14 @@ function submitForm(e, successId, type) {
     window.open(waUrl, '_blank');
   }
 
+  // If it's an admission inquiry, redirect to WhatsApp immediately
+  if (type === 'admission') {
+    const waPhone = '917845606488';
+    const waText = `*New Admission Inquiry from IBC Website*\n\n*Name:* ${data.name}\n*Email:* ${data.email}\n*Interested Programme:* ${data.programme}\n*Message:* ${data.message}`;
+    const waUrl = `https://wa.me/${waPhone}?text=${encodeURIComponent(waText)}`;
+    window.open(waUrl, '_blank');
+  }
+
   data.id = Date.now();
   data.timestamp = new Date().toISOString();
   data.status = 'New';

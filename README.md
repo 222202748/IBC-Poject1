@@ -40,6 +40,6 @@ ibc-website/
 - Accredited by **NATA**, India.
 
 ## Design Identity
-- **Brand Colors**: Deep Maroon (#4a0e0e) and Gold (#c8973a).
+- **Brand Colors**: Navy Blue (#002147) and Gold (#c8973a).
 - **Typography**: Cormorant Garamond (Classical Headings) + Lato (Clean Body Text).
 - **Experience**: Immersive, spiritual, and professional.

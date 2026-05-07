@@ -7,15 +7,15 @@
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#fdf8f0",
-  "theme_color": "#4a0e0e",
+  "theme_color": "#00152e",
   "lang": "en-IN",
   "dir": "ltr",
   "categories": ["education", "religion"],
   "icons": [
     {
-      "src": "/js/icons/logo.ico",
+      "src": "/js/icons/INDIA BIBLE COLLEGE logo.png",
       "sizes": "any",
-      "type": "image/x-icon",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ],
@@ -25,21 +25,21 @@
       "short_name": "Courses",
       "description": "View B.Th, M.Div, Diploma & Certificate theology programmes",
       "url": "/courses.html",
-      "icons": [{ "src": "/js/icons/logo.ico", "sizes": "any" }]
+      "icons": [{ "src": "/js/icons/INDIA BIBLE COLLEGE logo.png", "sizes": "any" }]
     },
     {
       "name": "Apply Now",
       "short_name": "Admission",
       "description": "Apply for admission to India Bible College",
       "url": "/admissions.html",
-      "icons": [{ "src": "/js/icons/logo.ico", "sizes": "any" }]
+      "icons": [{ "src": "/js/icons/INDIA BIBLE COLLEGE logo.png", "sizes": "any" }]
     },
     {
       "name": "Contact Us",
       "short_name": "Contact",
       "description": "Get in touch with India Bible College, Chennai",
       "url": "/contact.html",
-      "icons": [{ "src": "/js/icons/logo.ico", "sizes": "any" }]
+      "icons": [{ "src": "/js/icons/INDIA BIBLE COLLEGE logo.png", "sizes": "any" }]
     }
   ],
   "screenshots": [
